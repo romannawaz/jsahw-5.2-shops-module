@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Homework 5 shopsModule</title>
+
+    <link rel="stylesheet" href="./styles/main.css">
+</head>
+
+<body>
+    <div class="shop-wrapper">
+        <div class="shop__block shop__status">
+            <div class="shop__balance">
+                <p class="item__heading">Баланс</p>
+                <p class="item__info"></p>
+            </div>
+
+            <div class="shop__product shop__product-beer" data-product="beer">
+                <p class="item__heading">Пиво</p>
+                <p class="item__info"></p>
+            </div>
+
+            <div class="shop__product shop__product-wine" data-product="wine">
+                <p class="item__heading">Вино</p>
+                <p class="item__info"></p>
+            </div>
+
+            <div class="shop__product shop__product-pepsi" data-product="pepsi">
+                <p class="item__heading">Пепси</p>
+                <p class="item__info"></p>
+            </div>
+        </div>
+
+        <div class="shop__block sale">
+            <form class="sale__form">
+                <p class="item__heading">Количество</p>
+                <input type="number" class="item__info amount-of-product" value="1" min="1">
+
+                <div class="sale__products">
+                    <div class="sale__product">
+                        <input type="radio" name="product" id="sale__beer" data-product="beer" checked>
+                        <label for="sale__beer">Пиво</label>
+                    </div>
+                    <div class="sale__product">
+                        <input type="radio" name="product" id="sale__wine" data-product="wine">
+                        <label for="sale__wine">Вино</label>
+                    </div>
+                    <div class="sale__product">
+                        <input type="radio" name="product" id="sale__pepsi" data-product="pepsi">
+                        <label for="sale__pepsi">Пепси</label>
+                    </div>
+                </div>
+
+                <button type="submit" class="sale__add-product">Додати</button>
+            </form>
+
+            <div class="sale__cart"></div>
+
+            <button type="button" class="sale__buy">Купити</button>
+        </div>
+
+        <div class="shop__block shop__receipt"></div>
+    </div>
+
+    <div class="error none"></div>
+
+    <!-- Shops Module -->
+    <script src="./shop.js" type="module"></script>
+
+    <!-- Main JS File -->
+    <script src="./main.js" type="module"></script>
+
+</body>
+
+</html>
